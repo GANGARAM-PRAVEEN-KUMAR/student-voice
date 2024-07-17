@@ -21,18 +21,18 @@ const checkUser=async(req,res)=>{
                 
             jwt.sign({user},secret,(err,token)=>{
                 if(!err)
-                    res.status(200).json({token,role,username,userId})
+                    res.json({status : "success",token,role,username,userId})
                 else
-                    res.status(407).send(false)
+                    res.json({sataus : "fail"})
             })
         }
         else{
-            res.status(404).send(false)
+            res.json({sataus : "fail"})
         }
 
     }
     catch(error){
-        res.status(404).send(false)
+        res.json({sataus : "fail"})
     }
 }
 

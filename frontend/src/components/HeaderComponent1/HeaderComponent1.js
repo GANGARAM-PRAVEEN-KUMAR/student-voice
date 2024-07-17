@@ -5,7 +5,7 @@ function HeaderComponent() {
   return (
     <>
       <div className="head">
-        <img src={require('./cvr name.webp')} width="600" />
+        <img src={require('./cvr name.webp')} width="600" id="image"/>
         &nbsp;&nbsp;&nbsp;
         <nav className="nav-bar">
           <div className="box">

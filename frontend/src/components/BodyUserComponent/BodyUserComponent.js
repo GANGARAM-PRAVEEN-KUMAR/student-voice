@@ -6,6 +6,11 @@ import "./anon.jpg";
 
 import { NavLink } from "react-router-dom";
 function BodyUserComponent() {
+
+ const handleAnonymous=()=>{
+  localStorage.setItem("type","anonymous")
+ }
+
   return (
     <>
       <div className="usercomplaint">
@@ -17,9 +22,9 @@ function BodyUserComponent() {
             </NavLink>
           </div>
           <div className="anonyms">
-            <NavLink to="/complaint">
+            <NavLink to="/complaint" onClick={()=>handleAnonymous()} >
             <span id="text">Anonymous Complaint</span>
-              <img src={require("./anon.jpg")} id="anony-img" />
+              <img src={require("./anon.jpg") } id="anony-img" />
             </NavLink>
           </div>
         </div>

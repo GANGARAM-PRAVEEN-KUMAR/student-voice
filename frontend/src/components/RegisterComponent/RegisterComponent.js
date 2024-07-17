@@ -1,6 +1,7 @@
 import "./register.css";
 import "./register.gif";
 import { NavLink, useNavigate } from "react-router-dom";
+import { ToastContainer,toast } from "react-toastify";
 import axios from "axios";
 function RegisterComponent() {
   
@@ -70,7 +71,7 @@ function RegisterComponent() {
                   id="email"
                   placeholder="Email"
                 />
-                <p>password </p>
+                <p>Password </p>
                 <input
                   type="password"
                   placeholder="password"
@@ -81,7 +82,7 @@ function RegisterComponent() {
               <div className="con3">
                 <p>User ID </p>
                 <input type="text" placeholder="Roll No" id="rollno" required />
-                <p>phone no </p>
+                <p>Phone no </p>
                 <input
                   type="text"
                   placeholder="phone no"
@@ -126,6 +127,7 @@ function RegisterComponent() {
           <img src={require("./register.gif")} id="gif" alt="" />
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 }

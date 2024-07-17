@@ -6,7 +6,7 @@ app.use(cors())
 
 //Environmental variables
 require('dotenv').config()
-const port=process.env.PORT
+const port=process.env.PORT || 4000;
 
 //Routes
  const userRoutes=require('./routes/user.route')

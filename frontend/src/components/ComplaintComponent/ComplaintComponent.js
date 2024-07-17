@@ -9,8 +9,12 @@ function ComplaintComponent() {
   const navigate=useNavigate()
   const handleComplaint= async()=>{
     try{
+      var id=localStorage.getItem("userId");
+      if(localStorage.getItem("type")==="anonymous"){
+        id="XXXXXXXXXX";
+      }
       const complaint={
-          userId: localStorage.getItem("userId"),
+          userId: id,
           category : document.getElementById("category").value,
           nature : document.getElementById("nature").value,
           description : document.getElementById("textarea").value,
@@ -27,6 +31,7 @@ function ComplaintComponent() {
 
       if(response.status===200){
         alert("complaint registered successfully");
+        localStorage.removeItem("type");
         navigate("/userhome")
       }
       else{
@@ -61,7 +66,7 @@ function ComplaintComponent() {
             </label>
             <br />
             <br />
-            <label>Complaint Discription</label>
+            <label>Complaint Description</label>
             <br />
 
             <textarea
