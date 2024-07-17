@@ -7,6 +7,7 @@ app.use(cors())
 //Environmental variables
 require('dotenv').config()
 const port=process.env.PORT || 4000;
+const database_url=process.env.DATABASE_URL;
 
 //Routes
  const userRoutes=require('./routes/user.route')
@@ -17,7 +18,7 @@ const port=process.env.PORT || 4000;
 
 //mongDB connection
 const mongoose=require('mongoose')
-mongoose.connect("mongodb://127.0.0.1:27017/complaint")
+mongoose.connect(database_url)
 .then((res)=>{console.log("connected successfully")})
 .catch((err)=>{console.log(err)})
 
