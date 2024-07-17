@@ -22,7 +22,7 @@ function ComplaintComponent() {
           status : "pending",
           //complaintID : "5",
       }
-      const response=await axios.post("http://localhost:4000/complaint/savecomplaint",complaint,
+      const response=await axios.post("https://student-voice-backend.onrender.com/complaint/savecomplaint",complaint,
       {headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${localStorage.getItem("token")}`

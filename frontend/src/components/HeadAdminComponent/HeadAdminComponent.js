@@ -21,7 +21,7 @@ function HeadAdmimComponent() {
     const fetchData=async ()=>{
         try{
           console.log("hiiii")
-          const response= await axios.get("http://localhost:4000/admin/complaints",{
+          const response= await axios.get("https://student-voice-backend.onrender.com/admin/complaints",{
             headers: {
               'Content-Type': 'application/json',
               Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -44,8 +44,7 @@ function HeadAdmimComponent() {
 
     const handleUpdate=async (id,nature)=>{
       try{
-        console.log(`http://localhost:4000/admin/${id}/${nature}`)
-        const response=await axios.patch(`http://localhost:4000/admin/${id}/${nature}`,{},{
+        const response=await axios.patch(`https://student-voice-backend.onrender.com/admin/${id}/${nature}`,{},{
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem("token")}`

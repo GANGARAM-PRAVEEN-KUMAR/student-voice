@@ -15,7 +15,7 @@ function LoginComponent() {
         event.preventDefault(); // Prevent the default form submission behavior
         console.log("start");
         try {
-            const response = await axios.post("http://localhost:4000/login", {
+            const response = await axios.post("https://student-voice-backend.onrender.com/login", {
                 email: email,
                 password: password,
             });

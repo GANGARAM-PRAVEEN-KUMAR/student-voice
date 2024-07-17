@@ -31,7 +31,7 @@ function RegisterComponent() {
         gender: gender
       };
       console.log("hii")
-      const response = await axios.post("http://localhost:4000/signup", user);
+      const response = await axios.post("https://student-voice-backend.onrender.com/signup", user);
       console.log(response.status);
       if (response.status === 200) {
         //alert("Registered Successfully");

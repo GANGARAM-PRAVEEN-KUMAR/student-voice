@@ -12,7 +12,7 @@ function CompletedComponent() {
       try {
         
         const response = await axios.get(
-          "http://localhost:4000/complaint/complaints",
+          "https://student-voice-backend.onrender.com/complaint/complaints",
           {
             headers: {
               "Content-Type": "application/json",
