@@ -23,12 +23,12 @@ To install and run this project locally, follow these steps:
     ```
 3. Install server-side dependencies:
     ```sh
-    cd ../backend
+    cd backend
     npm install
     ```
 4. Install client-side dependencies:
     ```sh
-    cd frontend
+    cd ../frontend
     npm install
     ```
 
