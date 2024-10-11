@@ -1,3 +1,10 @@
+.middle-body *{
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    text-decoration: none;
+}
 .middle-body .top{
     height:180px;
     background-color: #29398d;
@@ -6,35 +13,37 @@
 }
 
 .middle-body .scroll{
+    background-color: #29398d;
+    width: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    
+    
     
 }
 .middle-body .scroll-bar{
-    height:60px;
-    width:150px;
-    color:white;
-    background-color:#29398d;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top:10px;
-    margin-top:10px;
+    padding-top:.3rem ;
+      width: 175px;
+      height: 50px;
+      align-items: center;
+      color: white;
+      padding-left: 0.3rem;
+      
+      
+      
 }
-.middle-body .scroll-bar span{
-    font-size:20px;
-    padding:10px;
-}
+
 .middle-body .scroll-con{
-    width:100%;
-    background-color: #29398d;
-    height: 60px;
-    margin-top:10px;
-    transition-property: all;
-    transition-duration: 2s;
-    transition-timing-function: ease-in;
+    color: white;
+    width: 100%;
+    padding-bottom: 1rem;
+    
+
 }
 .middle-body .scroll-con pre{
-    font-size:15px;
+    font-size:17px;
     color:white;
     transition-property: all;
     transition-duration: 2s;
@@ -47,25 +56,24 @@
 }
 
 
-.middle-body .updates{
-    height:500x;
-    background-color:#ffffff;
-    text-align: center;
+.middle-body .updates img{
+    width: 100%;
+   
+  
 }
 
 .middle-body .logins{
-    height: 300px;
+    width: 100%;
     background-color:steelblue;
     display: flex;
     box-sizing: border-box;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding:40px;
+    align-items: center;
 }
 
-.middle-body .circulars{
-    height:300px;
-    background-color:#ffffff;
-}
+
 .middle-body .std-login{
     background-color: white;
     height:200px;
@@ -76,12 +84,13 @@
 
 .middle-body #adm-img{
     height:160px;
+
 }
 
 .middle-body .log-con{
     font-size:40px;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -113,3 +122,20 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 } */
+ @media screen  and (max-width:730px){
+    .middle-body .scroll-con pre{
+           overflow: hidden;
+    } 
+
+    
+ }
+ @media screen  and (max-width:800px){
+    .middle-body .logins{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+    } 
+    
+
+    
+ }

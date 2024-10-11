@@ -10,18 +10,19 @@ function BodyComponent1() {
       <div className="middle-body">
       <div className="scroll">
         <div className="scroll-bar">
+          
           <span>UPDATES |</span>
         </div>
         <div className="scroll-con">
           <marquee>
-            <pre><img src={require('./new.gif')} id="new-img"/>Raise a Anonymous complaint   <img src={require('./new.gif')} id="new-img"/>B.Tech III YEAR I SEM Regular Examinations (R18/B21) held in January-2024   
+            <pre><img src={require('./new.gif')} id="new-img"/>Raise a Anonymous complaint   <img src={require('./new.gif')} id="new-img"/>Welcome to CVR Complaint Webiste   
               </pre>
           </marquee>
         </div>
       </div>
 
       <div className="updates">
-        <img src={require('./voice.jpg')} height="500px" />
+        <img src={require('./voice.jpg')}  />
       </div>
 
       <div className="logins">
