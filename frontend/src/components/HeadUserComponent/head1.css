@@ -1,134 +1,188 @@
-.head2 .home{
-    background-color: aliceblue;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-
-.head2{
-    margin-bottom: 10rem;
-    height:90px;
-    background-color: #7e1010;
-    width: 100%;
-    text-align: center;
-}
-
-
-.head2 .nav-bar ul{
-   list-style: none;
-   display:flex;
-   justify-content: center;
-   text-align: center;
-}
-
-
-
-.head2 .box1:hover{
-   height: 2rem;
-   transition: 1s ease-in-out;
-    border-bottom: 3px solid rgb(193, 156, 156);
-}
-
-
-.head2 .box {
-    margin-top: 1.5rem;
+.head2 .imgcls{
+    background: linear-gradient(90.9deg, rgb(3, 195, 195) 0.3%, rgb(37, 84, 112) 87.8%);
     display: flex;
-    justify-content: space-between;
-    color: rgb(16, 4, 4);
-    text-decoration:none;
-    text-transform: capitalize;
+    justify-content: center;
+    width: 100%;
+}
+.head2 *{
+   margin: 0px;
+   box-sizing: border-box;
+   font-family: 'Times New Roman', Times, serif;
+   text-decoration: none;
+   
 }
 
-
-.head2 .box1{
-    margin-top: .5rem;
-    border: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+.head2 .navbar{
+    width: 100%;
+    height: 60px;
+   
     
 }
-.head2 #but1{
-    margin-right: 2rem;
-    background-color: White;
-      color: rgb(3, 13, 3);
-      border: none;
-      font-size: 1.5rem;
-      text-transform: capitalize;
-      font-family:Cambria;
 
-}
+.head2 .navbar-nav{
 
-.head2 #but1:hover{
-    background-color:red;
-    border-radius: 3px;
-    color: white;
+    
+    font-size: 21px;
+     width: 100%;
+    display: flex;
+  
+    gap: 10rem;
+    justify-content: center;
+      
+} 
+.head2 .nav-item:hover{
+  
+    position:relative;
     cursor: pointer;
+     
+   
+
 }
-.head2 .Name{
-    display: flex;
-    gap: 1rem;
-    margin-top: .5rem;
-    font-size: 2rem;
-}
-.head2 #img1{
-    height: 2rem;
-   margin-left: 5px;
-}
-.head2 .top{
-    height:180px;
-    background-color:#7e1010;
-    width: 100%;
-    text-align: center;
+.head2 .navbar-toggler{
+    border: none;
 }
 
-.head2  .scroll{
+.head2 .normal{
+    width: 100%;
+}
+.head2 .nav-item:after {
+  display:block;
+  content: '';
+  border-bottom: solid 1.5px black;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.head2 .nav-item:hover:after { transform: scaleX(1); }
+
+.head2 .scroll{
+    background: linear-gradient(90.9deg, rgb(3, 195, 195) 0.3%, rgb(37, 84, 112) 87.8%);
+    width: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    
+    
     
 }
 .head2 .scroll-bar{
-    height:60px;
-    width:150px;
-    color:white;
-    background-color:#7e1010;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top:10px;
-    margin-top:10px;
+    padding-top:.3rem ;
+      width: 130px;
+      height: 50px;
+      align-items: center;
+      color: white;
+      left: 0px;
+      font-size: 21px;
+      
+      
 }
-.head2 .scroll-bar span{
-    font-size:20px;
-    padding:10px;
-}
+
 .head2 .scroll-con{
-    width:100%;
-    background-color: #7e1010;
-    height: 60px;
-    margin-top:10px;
-    transition-property: all;
-    transition-duration: 2s;
-    transition-timing-function: ease-in;
+    color: white;
+    width: 100%;
+    padding-bottom: 1rem;
+    
+
 }
 .head2 .scroll-con pre{
-    font-size:15px;
-    padding: 15px;
+    font-size:17px;
     color:white;
     transition-property: all;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+    margin-top: 20px;
 }
-.head2  #new-img{
+.head2 #new-img{
     height:30px;
+    
 }
 
 
-.head2 .updates{
-    height:500x;
-    background-color:#ffffff;
-    text-align: center;
+.head2 .updates img{
+    width: 100%;
+   
+  
+}
+@media screen  and (max-width:730px){
+    .head2 .scroll-con pre{
+           overflow: hidden;
+    } 
+
+    
+ }
+@media only screen and (max-width:990px) {
+    .head2 .navbar-nav{
+
+        width: 100%;
+        font-size: 21px;
+       
+        display: flex;
+
+       
+        gap: 1rem;
+          
+    } 
+    .head2 .nav-link:hover{
+         font-size: 25px;
+         border-bottom: none;
+    
+    }
+    .head2 .navbar{
+        width: 100%;
+        height: auto;
+        background-color: #29398d;
+        
+        
+    }
+    @media (max-width: 1000px) {
+        .head2 .nav-item {
+          position: relative; /* Make the parent element the reference point for the pseudo-element */
+        }
+      
+        .head2 .nav-item:after {
+          display: block;
+          content: '';
+          width: 9%; /* Ensure the underline matches the width of the text */
+          border-bottom: solid 1.5px black;
+          position: absolute; /* Position it relative to the parent */
+          bottom: 0;
+          left: 0;
+          transform: scaleX(0);
+          transform-origin: left; /* Start animation from the left side */
+          transition: transform 250ms ease-in-out;
+        }
+      
+        .head2 .nav-item:hover:after {
+          transform: scaleX(1); /* Full width when hovered */
+        }
+      }
+    
+}
+@media only screen and (max-width:800px) {
+    .head2 .imgcls{
+        width: 100%;
+
+    }
+    .head2 .imgcls img{
+        width: 60%;
+        height: 70px;
+      
+    }
+
+    
+}
+@media only screen and (max-width:700px) {
+    .head2 .imgcls{
+        width: 100%;
+        background: linear-gradient(90.9deg, rgb(3, 195, 195) 0.3%, rgb(37, 84, 112) 87.8%);
+    }
+    .head2 .imgcls img{
+        width: 90%;
+       height: 100px;
+       
+         
+    }
+
+    
 }
 
-.head2 #text{
-    color: black;
-    text-decoration: none;
-}

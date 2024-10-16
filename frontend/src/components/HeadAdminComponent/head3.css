@@ -1,58 +1,53 @@
-.head3 .home{
-    background-color: aliceblue;
+.head3 *{
+    margin: 0px;
     box-sizing: border-box;
-    width: 100%;
+    
+    text-decoration:none;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 
 
-.head3{
+.head3 .admimgcls{
     
-    height:90px;
-    background-color: #7e1010;
-    width: 100%;
+    height:110px;
+    background: linear-gradient(90.9deg, rgb(3, 195, 195) 0.3%, rgb(37, 84, 112) 87.8%);
+   
     text-align: center;
+   
+}
+.head .admimgcls img{
+    width: 200px;
 }
 
-
-.head3 .nav-bar ul{
-   list-style: none;
-   display:flex;
-   justify-content: center;
-   text-align: center;
-}
-
-
-
-.head3 .box1:hover{
-   height: 2rem;
-   transition: 1s ease-in-out;
-    border-bottom: 3px solid black;
-}
 
 
 .head3 .box {
-    margin-top: 1.5rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     color: rgb(16, 4, 4);
-    text-decoration:none;
+  
     text-transform: capitalize;
+    
 }
 
 
 .head3 #but1{
-    margin-right: 2rem;
+    
     background-color: white;
       color: black;
       border: none;
       font-size: 2rem;
       text-transform: capitalize;
-      font-family:Cambria;
+   
+     
 
 }
 
+
 .head3 #but1:hover{
+   
     background-color:red;
     border-radius: 3px;
     color: white;
@@ -68,7 +63,7 @@
 .flex .card1{
     padding: 10PX;
     margin-top: 1rem;
-    width: 50rem;
+    width: 50%;
     height: auto;
     margin-left: 3rem;
     background-color: rgb(238, 237, 237);
@@ -81,31 +76,28 @@
     display: flex;
     
     justify-content: space-around;
-    margin-top: 10rem;
+
     margin-bottom: 2rem;
 }
 .flex .card1:hover{
     transition: 1s;
-    box-shadow:3px 3px  black;
+    box-shadow:3px 15px 20px 10px silver;
 }
 .flex #complaint{
-    margin-top: .5rem;
-    width: 20rem;
-    height: 13rem;
+   
 }
 .flex #solve{
     
-    padding: .5rem;
-    margin-left: 35rem;
+  
     border-radius: 3px;
     color: white;
     background-color: red;
     border: none;
+    margin: 2rem;
 }
 .flex #solved{
     
-    padding: .5rem;
-    margin-left: 35rem;
+   
     border-radius: 3px;
     color: white;
     background-color: rgb(0, 255, 34);
@@ -122,4 +114,54 @@
 .flex #SOLVE:HOVER{
     transition: .5s;
     background-color: rgb(90, 136, 90);
+}
+@media screen and (max-width:800px) {
+    .head3 .home{
+        width: 100%;
+        
+    }
+    .head3 .admimgcls img{
+        width: 80%;
+        object-fit: cover;
+       
+    
+    }
+    .flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex .card1{
+        width: 80%;
+        margin: 0px;
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .head3 .home{
+        width: 100%;
+        
+    }
+    .head3 .admimgcls img{
+        width: 100%;
+        object-fit: cover;
+       
+    
+    }
+    .head3 .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .head3 #but1{
+        margin-left: 3rem;
+    }
+    .flex .card1{
+        width: 80%;
+        margin: 0px;
+        margin-top: 1rem;
+    }
 }

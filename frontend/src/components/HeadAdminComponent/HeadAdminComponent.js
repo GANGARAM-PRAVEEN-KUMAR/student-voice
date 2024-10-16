@@ -69,8 +69,9 @@ function HeadAdmimComponent() {
   return (
     <>
       <div className="head3">
+        <div className="admimgcls">
         <img src={require("./cvr name.webp")} width="600" />
-        &nbsp;&nbsp;&nbsp;
+        </div>
         <nav className="nav-bar">
           <div className="box">
             <div className="admin"> {">Admin-Dashboard"}</div>

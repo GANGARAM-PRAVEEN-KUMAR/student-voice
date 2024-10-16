@@ -11,3 +11,9 @@
     justify-content: center;
     color: white;
 }
+@media screen and (max-width:780px){
+    .footer i{
+        overflow: hidden;
+        text-decoration: none;
+    }
+}

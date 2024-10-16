@@ -2,27 +2,46 @@ import "./head.css";
 import './cvr name.webp';
 import {NavLink} from 'react-router-dom'
 function HeaderComponent() {
+ 
   return (
     <>
       <div className="head">
-        <img src={require('./cvr name.webp')} width="600" id="image"/>
-        &nbsp;&nbsp;&nbsp;
-        <nav className="nav-bar">
-          <div className="box">
-            <div className="box1">
-              <NavLink to="/" id="text">Home</NavLink>
-            </div>
-            <div className="box1">
-              <NavLink to="/login" id="text">login </NavLink>
-            </div>
-            <div className="box1">
-              <NavLink to="/signup" id="text">register</NavLink>
-            </div>
-            <div className="box1">
-              <NavLink to="/contact" id="text">Contact us</NavLink>
-            </div>
-          </div>
-        </nav>
+        <div className="imgcls">
+        <img src={require('./cvr name.webp')}  id="image"/>
+        </div>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+  <div className="container-fluid ">
+    
+     
+    
+
+    
+     
+    <button className="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="normal">
+    <div className="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul className="navbar-nav mx-4  ">
+        <li className="nav-item">
+          <NavLink className="nav-link active text-dark" aria-current="page" id="text" to="/">Home</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link text-dark" id="text"  to="/login">Login</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link text-dark" id="text" to="/signup">Register</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link text-dark" id="text" to="/contact">Contact Us</NavLink>
+        </li>
+        </ul>
+       
+      </div>
+    </div>
+    </div>
+</nav>
+
       </div>
     </>
   );

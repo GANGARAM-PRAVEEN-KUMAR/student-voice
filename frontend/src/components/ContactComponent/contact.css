@@ -51,10 +51,11 @@
 .contactus .support{
     text-align: center;
     align-items: center;
-    padding-top:20px;
+  
     display: flex;
     justify-content: center;
     font-size:30px;
+   
 }
 .contactus #name{
     margin: 10px;
@@ -95,4 +96,10 @@
     background-color:#29398d;
     color:#ffffff;
     font-size: medium;
+}
+@media screen and (max-width:800px) {
+    .contactus .support{
+        display: flex;
+        flex-direction: column;
+    }
 }

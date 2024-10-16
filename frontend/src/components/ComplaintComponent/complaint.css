@@ -1,23 +1,34 @@
-.complaint-reg {
-    background-color:white;
-    margin-top: 12rem;
-    margin-bottom: 2rem;
+.complaint-reg  *{
+   margin: 0px;
+   box-sizing: border-box;
+   font-family: 'Times New Roman', Times, serif;
+   text-decoration: none;
+}
+.complaint-reg .com-tab{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .complaint-reg .box4{
-    
+    width: 40%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    overflow: hidden;
 }
 .complaint-reg .box1{
     border: 2px solid black;
-    width: 50%;
+    width: 80%;
     height: 420px;
     margin-top: 2%;
     padding: 30px;
     margin-left: 5%;
     background-color:white;
     border-radius: 10px;
+    overflow: hidden;
 }
 .complaint-reg select{
     width:250px;
@@ -56,6 +67,29 @@
 
 }
 .complaint-reg img{
-    width: 550px;
+    width: 50%;
     height: 450px;
+}
+@media screen  and (max-width:800px){
+    .complaint-reg .com-tab{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .complaint-reg .box4{
+        width: 100%;
+
+        overflow: hidden;
+       
+    }
+    .complaint-reg .box1{
+        width: 100%;
+
+        overflow: hidden;
+    }
+    .complaint-reg img{
+        width: 100%;
+       
+    }
+    
 }

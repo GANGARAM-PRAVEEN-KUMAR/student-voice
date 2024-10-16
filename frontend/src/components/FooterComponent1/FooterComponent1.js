@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function FooterComponent1() {
   return (
     <>
-      <div class="footer2">
+      <div class="FootUser">
         <NavLink href="https://www.instagram.com/" target="-main">
           <i class="fa-brands fa-instagram"></i>
         </NavLink>

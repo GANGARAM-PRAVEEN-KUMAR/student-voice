@@ -50,7 +50,9 @@ function ComplaintComponent() {
   return (
     <>
       <div className="complaint-reg">
+       
         <h1>Make the Complaint</h1>
+        <div className="com-tab">
         <div className="box4">
           <div className="box1">
             <label for="">Category</label>
@@ -89,7 +91,8 @@ function ComplaintComponent() {
             <br />
             <button id="button" onClick={()=>{handleComplaint()}}>Raise Complaint</button>
           </div>
-          <div>
+          </div>
+          <div className="com-img">
             <img src={require("./complaint.jpg")} alt="" />
           </div>
         </div>
