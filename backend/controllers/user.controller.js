@@ -5,10 +5,8 @@ const secret=process.env.secret
 
 const saveUser=async(req,res)=>{
     const user=req.body
-    console.log(user)
     try{
         const existingUser=await userModel.findOne({"email" : user.email})
-        console.log("hello")
         if(existingUser){
             res.status(409).send({"message" : "user already exists !"})
         }

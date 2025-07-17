@@ -4,21 +4,15 @@ const secret=process.env.SECRET
 
 const verifyToken= async (req,res,next)=>{
     try{
-        console.log("hiiiiiiiiiiiiiiiiiii")
-        console.log(req.headers)
         if(!req.headers.authorization){
             res.status(300).json({"message" : "Not athorized"})
             return;
         }
         const token=req.headers.authorization.split(" ")[1]
-    //console.log(req.headers)
-    //console.log(token)
     jwt.verify(token,secret,(err,data)=>{
         
-        //console.log(err)
         if(!err){
             req.user=data.user
-            console.log(req.user)
             next()
         }
         else
@@ -30,9 +24,7 @@ const verifyToken= async (req,res,next)=>{
 }
 
 const isAdmin=(req,res,next)=>{
-    console.log(req.user)
     const role=req.user.role
-    //console.log(role)
     if(role.toLowerCase()==="admin")
         next()
     else

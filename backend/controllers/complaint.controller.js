@@ -3,7 +3,6 @@ const complaintModel = require("../model/complaint.model");
 const getUserComplaints = async (req, res) => {
   try {
     const userId = req.params.id;
-    //console.log(userId)
     const complaints = await complaintModel.find({});
     res.status(200).json(complaints);
   } catch (error) {
@@ -13,9 +12,7 @@ const getUserComplaints = async (req, res) => {
 
 const getComplaints = async (req, res) => {
   try {
-    console.log("hello");
     const userId = req.user.userId;
-    console.log(userId);
     const complaints = await complaintModel.find({ userId: userId });
   
     res.status(200).json(complaints);
@@ -28,9 +25,7 @@ const getComplaints = async (req, res) => {
 const addComplaint = async (req, res) => {
   try {
     const complaint=req.body;
-    console.log(req.body)
     await complaintModel.create(complaint);
-    console.log("hii")
     res.status(200).json({ message: "complaint added to list" });
   } catch (error) {
     console.error(error)
@@ -46,7 +41,6 @@ const deleteComplaint = async (req, res) => {
       complaintId: complaintId,
       userId: userId,
     });
-    console.log(item);
     if (!item) res.status(404).json({ message: "complaint not found" });
     else res.status(200).json(item);
   } catch (error) {
@@ -58,15 +52,12 @@ const updateStatusComplaint = async (req, res) => {
   try {
     const nature = req.params.nature;
     const userId = req.params.userid;
-    console.log(nature,userId)
-    console.log("hiiiii")
     const item = await complaintModel.findOneAndUpdate({
       nature: nature,
       userId: userId,
     },{
         status : "solved"
     });
-    console.log(item);
     if (!item) res.status(404).json({ message: "complaint not found" });
     else res.status(200).json(item);
   } catch (error) {
