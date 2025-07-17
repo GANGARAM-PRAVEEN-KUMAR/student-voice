@@ -29,7 +29,6 @@ function PendingComponent() {
             response.data.filter((complaint) => complaint.status === "solved")
           );
         } else {
-          console.log(response);
         }
       } catch (error) {
         console.error(error);
@@ -43,7 +42,6 @@ function PendingComponent() {
       <div class="UserPending">
         <pre id="Pending">{">Pending Complaints"}</pre>
         <hr />
-        {console.log(pending)}
         {pending.map((complaint) => (
           <div class="flex">
             <div class="card1">

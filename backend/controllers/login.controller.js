@@ -11,7 +11,6 @@ const checkUser=async(req,res)=>{
         const role=user.role
         const username=user.username
         const userId=user.userId
-         console.log(user)
         if(user && user.password===password){
             
             const existingUser= await loginModel.findOne({"email" : email})

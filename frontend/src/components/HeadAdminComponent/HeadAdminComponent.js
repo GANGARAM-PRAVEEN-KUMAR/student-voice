@@ -20,7 +20,6 @@ function HeadAdmimComponent() {
   useEffect(() => {
     const fetchData=async ()=>{
         try{
-          console.log("hiiii")
           const response= await axios.get("https://student-voice-backend.onrender.com/admin/complaints",{
             headers: {
               'Content-Type': 'application/json',
@@ -31,7 +30,6 @@ function HeadAdmimComponent() {
             setComplaints(response.data)
           }
           else{
-            console.log(response)
           }
         }
         catch(error){
@@ -51,7 +49,6 @@ function HeadAdmimComponent() {
           }
         })
         if(response.status===200){
-          console.log("solved")
           setStatus("solved")
           navigate("/adminhome")
         }
@@ -61,7 +58,6 @@ function HeadAdmimComponent() {
         }
       }
       catch(error){
-        console.log(error)
         navigate("/adminhome");
       }
     }

@@ -28,7 +28,6 @@ function DashBoardUserComponent() {
           setCompleted(response.data.filter((complaint)=>complaint.status==="solved"));
           
         } else {
-          console.log(response);
         }
       } catch (error) {
         console.error(error);
@@ -48,7 +47,6 @@ function DashBoardUserComponent() {
               <img src={require("./pending.jpg")} alt="" />
             </NavLink>
             <h4 id="name">pending Complaints</h4>
-            {console.log(pending)}
             <h4 id="value">{pending.length}</h4>
           </div>
           <div className="completed">

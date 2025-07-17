@@ -30,14 +30,9 @@ function RegisterComponent() {
         role: "user",
         gender: gender
       };
-      console.log("hii")
       const response = await axios.post("https://student-voice-backend.onrender.com/signup", user);
-      console.log(response.status);
       if (response.status === 200) {
-        //alert("Registered Successfully");
-        console.log(response.data)
         navigate("/login");
-        console.log("byee")
       } else {
         alert("user already exists !");
         navigate("/");

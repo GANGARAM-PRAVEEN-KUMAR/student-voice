@@ -27,7 +27,6 @@ function CompletedComponent() {
           setCompleted(response.data.filter((complaint)=>complaint.status==="solved"));
           
         } else {
-          console.log(response);
         }
       } catch (error) {
         console.error(error);
